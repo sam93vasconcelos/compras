@@ -1,4 +1,4 @@
-let cacheName = 'lista-de-compras-v.1.0.1';
+let cacheName = 'lista-de-compras-v.1.0.2';
 let filesToCache = [
     './',
     'manifest.json',
