@@ -1,6 +1,7 @@
 let cacheName = 'lista-de-compras-v.1.0.1';
 let filesToCache = [
     './',
+    'manifest.json',
     'index.html',
     'css/bootstrap.min.css',
     'js/jquery.js',
