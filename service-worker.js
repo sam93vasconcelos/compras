@@ -1,4 +1,4 @@
-let cacheName = 'lista-de-compras-v.1.0.0';
+let cacheName = 'lista-de-compras-v.1.0.1';
 let filesToCache = [
     './',
     'index.html',
