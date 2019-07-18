@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista de compras</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="manifest" href="manifest.json">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container bg-light pt-5">
+		<h1 class="titulo">Lista de compras</h1>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<input class="form-control" type="text" id="item" placeholder="Produto">
+				</div>	
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<input class="form-control" type="number" id="qtd" placeholder="Quantidade">
+				</div>
+			</div>
+			<input type="hidden" name="index" id="index">
+			<div class="col-md-1 create">
+				<div class="form-group">
+					<button class="btn btn-primary" onclick="add()">Adicionar</button>
+				</div>
+			</div>
+			<div class="col-md-1 update" style="display: none;">
+				<div class="form-group">
+					<button class="btn btn-primary" onclick="update()">Salvar</button>
+				</div>
+			</div>
+			<div class="col-md-1 update" style="display: none;">
+				<div class="form-group">
+					<button class="btn btn-danger" onclick="del()">Remover</button>
+				</div>
+			</div>
+			<div class="col-md-1 update" style="display: none;">
+				<div class="form-group">
+					<button class="btn btn-success" onclick="cancel()">Cancelar</button>
+				</div>
+			</div>
+		</div>
+		<h3 class="mt-3">Itens</h3>
+		<button class="btn btn-danger mt-3 mb-3" onclick="cleanList()">Limpar lista</button>
+		<div class="pb-5" id="lista">carregando...</div>
+	</div>
+	<style type="text/css">
+		@media(max-width: 767px) {
+			.col-md-1.update {
+				width: auto;
+			}
+		}
+	</style>
+<script src="js/jquery.js"></script>
+<script src="js/util.js"></script>
+<script src="js/lista.js"></script>
+</body>
+</html>
