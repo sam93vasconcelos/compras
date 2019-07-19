@@ -1,9 +1,11 @@
-let cacheName = 'lista-de-compras-v.1.0.2';
+let cacheName = 'lista-de-compras-v.1.0.9';
 let filesToCache = [
+    'https://fonts.googleapis.com/icon?family=Material+Icons',
     './',
     'manifest.json',
     'index.html',
-    'css/bootstrap.min.css',
+    'css/materialize.min.css',
+    'js/materialize.min.js',
     'js/jquery.js',
     'js/lista.js'
 ];

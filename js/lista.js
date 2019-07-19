@@ -5,11 +5,11 @@ function mountList() {
 	if(null != localStorage.getItem("lista")) {
 		list = JSON.parse(localStorage.getItem("lista"));
 	}
-	let html = '<ul class="list-group">';
+	let html = '<div class="collection">';
 	for(var index in list) {
-		html += `<li onclick="edit(`+index+`)" class="list-group-item d-flex justify-content-between align-items-center">` + list[index].name + `<span class="badge badge-primary badge-pill">`+ list[index].qtd +`</span></li>`;
+		html += `<a href="#" onclick="event.preventDefault();edit(`+index+`)" class="collection-item">` + list[index].name + `<span class="badge badge-primary badge-pill">`+ list[index].qtd +`</span></li>`;
 	}
-	html += '</ul>';
+	html += '</div>';
 	$("#lista").html(html);
 }
 
@@ -33,6 +33,7 @@ function add() {
 function edit(index) {
 	btnCreate.css('display', 'none');
 	btnUpdate.css('display', 'block');
+	$(".label").addClass('active');
 	$("#index").val(index);
 	$("#item").val(list[index].name);
 	$("#qtd").val(list[index].qtd);
@@ -58,11 +59,11 @@ function update() {
 function changeButtons() {
 	btnCreate.css('display', 'block');
 	btnUpdate.css('display', 'none');
+	$(".label").removeClass('active');
 }
 
 function cancel() {
-	btnCreate.css('display', 'block');
-	btnUpdate.css('display', 'none');
+	changeButtons();
 	clearForm();
 }
 
@@ -114,12 +115,12 @@ mountList();
 
 //PWA
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-    .register('./service-worker.js')
-    .then(function(reg) {
-        console.log('Service worker Registered');
-    })
-    .catch(function (err) {
-        console.log('erro', err);
-    });
+	navigator.serviceWorker
+	.register('./service-worker.js')
+	.then(function(reg) {
+		console.log('Service worker Registered');
+	})
+	.catch(function (err) {
+		console.log('erro', err);
+	});
 }
