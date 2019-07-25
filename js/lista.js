@@ -24,7 +24,7 @@ function add() {
 		list.unshift(item);
 		$("#item").val(null);
 		$("#qtd").val(null);
-		$("#item").focus();
+		//$("#item").focus();
 		localStorage.setItem("lista", JSON.stringify(list));
 		mountList();
 	}
@@ -89,7 +89,7 @@ function clearForm() {
 	$("#item").val(null);
 	$("#qtd").val(null);
 	$("#index").val(null);
-	$("#item").focus();
+	//$("#item").focus();
 }
 
 function cleanList() {

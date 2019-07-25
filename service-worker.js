@@ -1,4 +1,4 @@
-let cacheName = 'lista-de-compras-v.1.0.9';
+let cacheName = 'lista-de-compras-v.1.0.10';
 let filesToCache = [
     'https://fonts.googleapis.com/icon?family=Material+Icons',
     './',
